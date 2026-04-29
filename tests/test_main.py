@@ -149,3 +149,8 @@ class TestMain(unittest.TestCase):
         self.assertTrue(sum28([2, 3, 2, 2, 4, 2]))
         self.assertFalse(sum28([2, 3, 2, 2, 4, 2, 2]))
         self.assertFalse(sum28([1, 2, 3, 4]))
+
+    def test_more14(self):
+        self.assertTrue(more14([1, 4, 1]))
+        self.assertFalse(more14([1, 4, 1, 4]))
+        self.assertTrue(more14([1, 1]))

@@ -236,6 +236,18 @@ def sum28(nums: list[int]) -> bool:
     return total == 8
 
 
+def more14(nums: list[int]) -> bool:
+    count = 0
+
+    for n in nums:
+        if n == 1:
+            count += 1
+        if n == 4:
+            count -= 1
+    
+    return count > 0
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
