@@ -159,3 +159,8 @@ class TestMain(unittest.TestCase):
         self.assertEqual(fizzArray(4), [0, 1, 2, 3])
         self.assertEqual(fizzArray(1), [0])
         self.assertEqual(fizzArray(10), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+    def test_only14(self):
+        self.assertTrue(only14([1, 4, 1, 4]))
+        self.assertFalse(only14([1, 4, 2, 4]))
+        self.assertTrue(only14([1, 1]))

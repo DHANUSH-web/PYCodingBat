@@ -257,6 +257,13 @@ def fizzArray(n: int) -> list[int]:
     return arr
 
 
+def only14(nums: list[int]) -> bool:
+    for n in nums:
+        if n != 1 and n != 4:
+            return False
+    return True
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
