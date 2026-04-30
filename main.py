@@ -248,6 +248,15 @@ def more14(nums: list[int]) -> bool:
     return count > 0
 
 
+def fizzArray(n: int) -> list[int]:
+    arr: list[int] = []
+
+    for i in range(n):
+        arr.append(i)
+    
+    return arr
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
