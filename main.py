@@ -264,6 +264,15 @@ def only14(nums: list[int]) -> bool:
     return True
 
 
+def fizzArray2(n: int) -> list[str]:
+    arr: list[str] = []
+
+    for i in range(n):
+        arr.append(str(i))
+    
+    return arr
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
