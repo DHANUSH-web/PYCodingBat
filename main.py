@@ -273,6 +273,21 @@ def fizzArray2(n: int) -> list[str]:
     return arr
 
 
+def no14(nums: list[int]) -> bool:
+    has1, has4 = False, False
+
+    for n in nums:
+        if n == 1:
+            has1 = True
+        if n == 4:
+            has4 = True
+        
+        if has1 and has4:
+            return False
+    
+    return not(has1 and has4)
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
