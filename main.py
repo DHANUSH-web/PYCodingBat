@@ -288,6 +288,14 @@ def no14(nums: list[int]) -> bool:
     return not(has1 and has4)
 
 
+def isEverywhere(nums: list[int], val: int) -> bool:
+    for i in range(len(nums) - 1):
+        if nums[i] != val and nums[i+1] != val:
+            return False
+    
+    return True
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
