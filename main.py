@@ -296,6 +296,22 @@ def isEverywhere(nums: list[int], val: int) -> bool:
     return True
 
 
+def either24(nums: list[int]) -> bool:
+    is2, is4 = False, False
+
+    for i in range(len(nums)-1):
+        if is2 and is4:
+            break
+
+        if nums[i] == 2 and nums[i+1] == 2:
+            is2 = True
+
+        if nums[i] == 4 and nums[i+1] == 4:
+            is4 = True
+
+    return is2 and not is4 or not is2 and is4
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")

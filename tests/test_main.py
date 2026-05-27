@@ -179,3 +179,8 @@ class TestMain(unittest.TestCase):
         self.assertTrue(isEverywhere([1, 2, 1, 3], 1))
         self.assertFalse(isEverywhere([1, 2, 1, 3], 2))
         self.assertFalse(isEverywhere([1, 2, 1, 3, 4], 1))
+
+    def test_either24(self):
+        self.assertTrue(either24([1, 2, 2]))
+        self.assertTrue(either24([4, 4, 1]))
+        self.assertFalse(either24([4, 4, 1, 2, 2]))
