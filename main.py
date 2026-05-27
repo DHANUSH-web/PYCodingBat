@@ -309,7 +309,7 @@ def either24(nums: list[int]) -> bool:
         if nums[i] == 4 and nums[i+1] == 4:
             is4 = True
 
-    return is2 and not is4 or not is2 and is4
+    return is2 != is4
 
 
 if __name__ == "__main__":
