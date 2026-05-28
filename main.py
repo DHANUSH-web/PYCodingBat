@@ -312,6 +312,16 @@ def either24(nums: list[int]) -> bool:
     return is2 != is4
 
 
+def matchUp(nums1: list[int], nums2: list[int]) -> int:
+    count: int = 0
+
+    for i in range(len(nums1)):
+        if nums1[i] != nums2[i] and abs(nums1[i] - nums2[i]) <= 2:
+            count += 1
+    
+    return count
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")

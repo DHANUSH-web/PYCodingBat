@@ -184,3 +184,8 @@ class TestMain(unittest.TestCase):
         self.assertTrue(either24([1, 2, 2]))
         self.assertTrue(either24([4, 4, 1]))
         self.assertFalse(either24([4, 4, 1, 2, 2]))
+
+    def test_matchUp(self):
+        self.assertEqual(matchUp([1, 2, 3], [2, 3, 10]), 2)
+        self.assertEqual(matchUp([1, 2, 3], [2, 3, 5]), 3)
+        self.assertEqual(matchUp([1, 2, 3], [2, 3, 3]), 2)
