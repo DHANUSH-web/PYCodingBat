@@ -159,3 +159,28 @@ class TestMain(unittest.TestCase):
         self.assertEqual(fizzArray(4), [0, 1, 2, 3])
         self.assertEqual(fizzArray(1), [0])
         self.assertEqual(fizzArray(10), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+    def test_only14(self):
+        self.assertTrue(only14([1, 4, 1, 4]))
+        self.assertFalse(only14([1, 4, 2, 4]))
+        self.assertTrue(only14([1, 1]))
+
+    def test_fizzArray2(self):
+        self.assertEqual(fizzArray2(4), ['0', '1', '2', '3'])
+        self.assertEqual(fizzArray2(1), ['0'])
+        self.assertEqual(fizzArray2(10), ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'])
+
+    def test_no14(self):
+        self.assertTrue(no14([1, 2, 3]))
+        self.assertFalse(no14([1, 2, 3, 4]))
+        self.assertTrue(no14([2, 3, 4]))
+
+    def test_isEverywhere(self):
+        self.assertTrue(isEverywhere([1, 2, 1, 3], 1))
+        self.assertFalse(isEverywhere([1, 2, 1, 3], 2))
+        self.assertFalse(isEverywhere([1, 2, 1, 3, 4], 1))
+
+    def test_either24(self):
+        self.assertTrue(either24([1, 2, 2]))
+        self.assertTrue(either24([4, 4, 1]))
+        self.assertFalse(either24([4, 4, 1, 2, 2]))

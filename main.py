@@ -257,6 +257,61 @@ def fizzArray(n: int) -> list[int]:
     return arr
 
 
+def only14(nums: list[int]) -> bool:
+    for n in nums:
+        if n != 1 and n != 4:
+            return False
+    return True
+
+
+def fizzArray2(n: int) -> list[str]:
+    arr: list[str] = []
+
+    for i in range(n):
+        arr.append(str(i))
+    
+    return arr
+
+
+def no14(nums: list[int]) -> bool:
+    has1, has4 = False, False
+
+    for n in nums:
+        if n == 1:
+            has1 = True
+        if n == 4:
+            has4 = True
+        
+        if has1 and has4:
+            return False
+    
+    return not(has1 and has4)
+
+
+def isEverywhere(nums: list[int], val: int) -> bool:
+    for i in range(len(nums) - 1):
+        if nums[i] != val and nums[i+1] != val:
+            return False
+    
+    return True
+
+
+def either24(nums: list[int]) -> bool:
+    is2, is4 = False, False
+
+    for i in range(len(nums)-1):
+        if is2 and is4:
+            break
+
+        if nums[i] == 2 and nums[i+1] == 2:
+            is2 = True
+
+        if nums[i] == 4 and nums[i+1] == 4:
+            is4 = True
+
+    return is2 != is4
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
