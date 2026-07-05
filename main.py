@@ -322,6 +322,13 @@ def matchUp(nums1: list[int], nums2: list[int]) -> int:
     return count
 
 
+def has77(nums: list[int]) -> bool:
+    for i in range(0, len(nums)-2):
+        if (nums[i] == 7 and (nums[i+1] == 7 or nums[i+2] == 7)) or (nums[i+1] == 7 and nums[i+2] == 7):
+            return True
+    return False
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")

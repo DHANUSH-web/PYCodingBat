@@ -189,3 +189,8 @@ class TestMain(unittest.TestCase):
         self.assertEqual(matchUp([1, 2, 3], [2, 3, 10]), 2)
         self.assertEqual(matchUp([1, 2, 3], [2, 3, 5]), 3)
         self.assertEqual(matchUp([1, 2, 3], [2, 3, 3]), 2)
+
+    def test_has77(self):
+        self.assertTrue(has77([1, 7, 7]))
+        self.assertTrue(has77([1, 7, 1, 7]))
+        self.assertFalse(has77([1, 7, 1, 1, 7]))
