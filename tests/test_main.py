@@ -194,3 +194,9 @@ class TestMain(unittest.TestCase):
         self.assertTrue(has77([1, 7, 7]))
         self.assertTrue(has77([1, 7, 1, 7]))
         self.assertFalse(has77([1, 7, 1, 1, 7]))
+
+    def test_has12(self):
+        self.assertTrue(has12([1, 3, 2]))
+        self.assertTrue(has12([1, 7, 2, 7]))
+        self.assertTrue(has12([1, 7, 1, 1, 2]))
+        self.assertFalse(has12([1]))

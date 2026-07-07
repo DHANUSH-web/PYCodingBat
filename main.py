@@ -329,6 +329,17 @@ def has77(nums: list[int]) -> bool:
     return False
 
 
+def has12(nums: list[int]) -> bool:
+    found = False
+
+    for n in nums:
+        if n == 1 and not found:
+            found = True
+        if n == 2 and found:
+            return True
+    return False
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
