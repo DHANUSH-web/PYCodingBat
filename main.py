@@ -340,6 +340,21 @@ def has12(nums: list[int]) -> bool:
     return False
 
 
+def mod_three(nums: list[int]) -> bool:
+    for i in range(len(nums)-2):
+        if (
+            not nums[i]     % 2 and
+            not nums[i+1]   % 2 and
+            not nums[i+2]   % 2
+        ) or (
+            nums[i]     % 2 and
+            nums[i+1]   % 2 and
+            nums[i+2]   % 2
+        ):
+            return True
+    return False
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")

@@ -1,5 +1,45 @@
 import unittest
-from main import *
+from main import (
+    concat,
+    last_two,
+    see_colors,
+    front_again,
+    min_cat,
+    extra_front,
+    near10,
+    tea_party,
+    fizz_string,
+    fizz_string2,
+    two_as_one,
+    in_order,
+    in_order_equal,
+    JsonDataProps,
+    fetch_json_data,
+    lastDigit,
+    lessBy10,
+    withoutDoubles,
+    maxMod5,
+    redTicket,
+    greenTicket,
+    shareDigit,
+    sum13,
+    centeredAverage,
+    sum67,
+    has22,
+    lucky13,
+    sum28,
+    more14,
+    fizzArray,
+    only14,
+    fizzArray2,
+    no14,
+    isEverywhere,
+    either24,
+    matchUp,
+    has77,
+    has12,
+    mod_three
+)
 
 class TestMain(unittest.TestCase):
 
@@ -200,3 +240,8 @@ class TestMain(unittest.TestCase):
         self.assertTrue(has12([1, 7, 2, 7]))
         self.assertTrue(has12([1, 7, 1, 1, 2]))
         self.assertFalse(has12([1]))
+
+    def test_mod_three(self):
+        self.assertTrue(mod_three([2, 1, 3, 5]))
+        self.assertFalse(mod_three([2, 1, 2, 5]))
+        self.assertTrue(mod_three([2, 4, 2, 5]))
