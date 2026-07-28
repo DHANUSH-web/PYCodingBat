@@ -355,6 +355,22 @@ def mod_three(nums: list[int]) -> bool:
     return False
 
 
+def have_three(nums: list[int]) -> bool:
+    three_count: int = 0
+
+    for i in range(len(nums)-1):
+        if nums[i] == 3 and nums[i+1] != 3:
+            three_count += 1
+
+        if nums[i] == nums[i+1] == 3:
+            return False
+
+    if len(nums) > 2 and nums[-1] == 3 and nums[-2] != 3:
+        three_count += 1
+
+    return three_count == 3
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")

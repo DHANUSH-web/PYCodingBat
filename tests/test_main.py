@@ -38,7 +38,8 @@ from main import (
     matchUp,
     has77,
     has12,
-    mod_three
+    mod_three,
+    have_three,
 )
 
 class TestMain(unittest.TestCase):
@@ -245,3 +246,8 @@ class TestMain(unittest.TestCase):
         self.assertTrue(mod_three([2, 1, 3, 5]))
         self.assertFalse(mod_three([2, 1, 2, 5]))
         self.assertTrue(mod_three([2, 4, 2, 5]))
+    
+    def test_have_three(self):
+        self.assertTrue(have_three([3, 1, 3, 1, 3]))
+        self.assertFalse(have_three([3, 1, 3, 3]))
+        self.assertFalse(have_three([3, 4, 3, 3, 4]))
