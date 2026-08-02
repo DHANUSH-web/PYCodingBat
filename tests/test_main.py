@@ -40,6 +40,7 @@ from main import (
     has12,
     mod_three,
     have_three,
+    two_two,
 )
 
 class TestMain(unittest.TestCase):
@@ -251,3 +252,8 @@ class TestMain(unittest.TestCase):
         self.assertTrue(have_three([3, 1, 3, 1, 3]))
         self.assertFalse(have_three([3, 1, 3, 3]))
         self.assertFalse(have_three([3, 4, 3, 3, 4]))
+
+    def test_two_two(self):
+        self.assertTrue(two_two([4, 2, 2, 3]))
+        self.assertTrue(two_two([2, 2, 4]))
+        self.assertFalse(two_two([2, 2, 4, 2]))
