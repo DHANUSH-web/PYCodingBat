@@ -41,6 +41,7 @@ from main import (
     mod_three,
     have_three,
     two_two,
+    same_ends,
 )
 
 class TestMain(unittest.TestCase):
@@ -257,3 +258,8 @@ class TestMain(unittest.TestCase):
         self.assertTrue(two_two([4, 2, 2, 3]))
         self.assertTrue(two_two([2, 2, 4]))
         self.assertFalse(two_two([2, 2, 4, 2]))
+
+    def test_same_ends(self):
+        self.assertFalse(same_ends([5, 6, 45, 99, 13, 5, 6], 1))
+        self.assertTrue(same_ends([5, 6, 45, 99, 13, 5, 6], 2))
+        self.assertFalse(same_ends([5, 6, 45, 99, 13, 5, 6], 3))

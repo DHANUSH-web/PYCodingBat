@@ -399,6 +399,15 @@ def two_two(nums: list[int]) -> bool:
     return couple or count == 0
 
 
+def same_ends(nums: list[int], size: int) -> bool:
+    usize = len(nums)
+
+    for i in range(size):
+        if nums[i] != nums[usize - size + i]:
+            return False
+    return True
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
