@@ -42,6 +42,7 @@ from main import (
     have_three,
     two_two,
     same_ends,
+    triple_up,
 )
 
 class TestMain(unittest.TestCase):
@@ -263,3 +264,8 @@ class TestMain(unittest.TestCase):
         self.assertFalse(same_ends([5, 6, 45, 99, 13, 5, 6], 1))
         self.assertTrue(same_ends([5, 6, 45, 99, 13, 5, 6], 2))
         self.assertFalse(same_ends([5, 6, 45, 99, 13, 5, 6], 3))
+
+    def test_triple_up(self):
+        self.assertTrue(triple_up([1, 4, 5, 6, 2]))
+        self.assertTrue(triple_up([1, 2, 3]))
+        self.assertFalse(triple_up([1, 2, 5]))

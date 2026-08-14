@@ -408,6 +408,13 @@ def same_ends(nums: list[int], size: int) -> bool:
     return True
 
 
+def triple_up(nums: list[int]) -> bool:
+    for i in range(len(nums)-2):
+        if nums[i+1] - nums[i] == 1 and nums[i+2] - nums[i+1] == 1:
+            return True
+    return False
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
