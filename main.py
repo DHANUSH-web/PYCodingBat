@@ -415,6 +415,15 @@ def triple_up(nums: list[int]) -> bool:
     return False
 
 
+def fizz_array3(start: int, end: int) -> list:
+    arr: list[int] = []
+
+    for i in range(start, end):
+        arr.append(i)
+
+    return arr
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")

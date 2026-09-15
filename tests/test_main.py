@@ -43,6 +43,7 @@ from main import (
     two_two,
     same_ends,
     triple_up,
+    fizz_array3,
 )
 
 class TestMain(unittest.TestCase):
@@ -269,3 +270,8 @@ class TestMain(unittest.TestCase):
         self.assertTrue(triple_up([1, 4, 5, 6, 2]))
         self.assertTrue(triple_up([1, 2, 3]))
         self.assertFalse(triple_up([1, 2, 5]))
+
+    def test_fizz_array3(self):
+        self.assertEqual(fizz_array3(5, 10), [5, 6, 7, 8, 9])
+        self.assertEqual(fizz_array3(11, 18), [11, 12, 13, 14, 15, 16, 17])
+        self.assertEqual(fizz_array3(1, 3), [1, 2])
