@@ -340,6 +340,81 @@ def has12(nums: list[int]) -> bool:
     return False
 
 
+def mod_three(nums: list[int]) -> bool:
+    for i in range(len(nums)-2):
+        if (
+            not nums[i]     % 2 and
+            not nums[i+1]   % 2 and
+            not nums[i+2]   % 2
+        ) or (
+            nums[i]     % 2 and
+            nums[i+1]   % 2 and
+            nums[i+2]   % 2
+        ):
+            return True
+    return False
+
+
+def have_three(nums: list[int]) -> bool:
+    three_count: int = 0
+
+    for i in range(len(nums)-1):
+        if nums[i] == 3 and nums[i+1] != 3:
+            three_count += 1
+
+        if nums[i] == nums[i+1] == 3:
+            return False
+
+    if len(nums) > 2 and nums[-1] == 3 and nums[-2] != 3:
+        three_count += 1
+
+    return three_count == 3
+
+
+def two_two(nums: list[int]) -> bool:
+    if not nums:
+        return True
+
+    if len(nums) == 1:
+        return nums[0] != 2
+
+    count, i = 0, 0
+    couple  : bool = False
+    only    : bool
+    both    : bool
+
+    while i < len(nums)-1:
+        only = (nums[i] == 2 and nums[i+1] != 2) or (nums[i] != 2 and nums[i+1] == 2)
+        both = nums[i] == 2 and nums[i+1] == 2
+
+        if only:
+            couple = False
+            count += 1
+
+        if both:
+            couple = True
+            i += 1
+        i += 1
+
+    return couple or count == 0
+
+
+def same_ends(nums: list[int], size: int) -> bool:
+    usize = len(nums)
+
+    for i in range(size):
+        if nums[i] != nums[usize - size + i]:
+            return False
+    return True
+
+
+def triple_up(nums: list[int]) -> bool:
+    for i in range(len(nums)-2):
+        if nums[i+1] - nums[i] == 1 and nums[i+2] - nums[i+1] == 1:
+            return True
+    return False
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
