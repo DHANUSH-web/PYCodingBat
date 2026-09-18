@@ -44,6 +44,7 @@ from main import (
     same_ends,
     triple_up,
     fizz_array3,
+    shift_left,
 )
 
 class TestMain(unittest.TestCase):
@@ -275,3 +276,8 @@ class TestMain(unittest.TestCase):
         self.assertEqual(fizz_array3(5, 10), [5, 6, 7, 8, 9])
         self.assertEqual(fizz_array3(11, 18), [11, 12, 13, 14, 15, 16, 17])
         self.assertEqual(fizz_array3(1, 3), [1, 2])
+
+    def test_shift_left(self):
+        self.assertEqual(shift_left([5, 1, 2, 3, 4]), [1, 2, 3, 4, 5])
+        self.assertEqual(shift_left([1, 2]), [2, 1])
+        self.assertEqual(shift_left([1]), [1])

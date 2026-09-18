@@ -424,6 +424,12 @@ def fizz_array3(start: int, end: int) -> list:
     return arr
 
 
+def shift_left(nums: list) -> list:
+    if len(nums) <= 1:
+        return nums
+    return [*nums[1:], nums[0]]
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
