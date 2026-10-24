@@ -78,7 +78,7 @@ def fizz_string2(n: int) -> str:
         return "Fizz!"
     if not n % 5:
         return "Buzz!"
-    
+
     return f"{n}!"
 
 
@@ -107,7 +107,7 @@ def fetch_json_data(url: str, params: dict | None = None) -> JsonDataProps:
 
     if response.status_code != 200:
         raise requests.HTTPError(f"Failed to fetch {url}, status code: {response.status_code}")
-    
+
     data: dict = response.json()
     return JsonDataProps(
         userId=data['userId'],
@@ -134,33 +134,33 @@ def withoutDoubles(die1: int, die2: int, no_doubles: bool) -> int:
 def maxMod5(a: int, b: int) -> int:
     if a == b:
         return 0
-    
+
     if a % 5 == b % 5:
         return min(a, b)
-    
+
     return max(a, b)
 
 
 def redTicket(a: int, b: int, c: int) -> int:
     if a == b == c == 2:
         return 10
-    
+
     if a == b == c:
         return 5
-    
+
     if a != b and a != c:
         return 1
-    
+
     return 0
 
 
 def greenTicket(a: int, b: int, c: int) -> int:
     if a == b == c:
         return 20
-    
+
     if a == b or a == c or b == c:
         return 10
-    
+
     return 0
 
 
@@ -175,7 +175,7 @@ def fact(n: int) -> int:
 def sum13(nums: list[int]) -> int:
     if len(nums) == 0:
         return 0
-    
+
     if nums[0] == 13:
         return 0
 
@@ -184,13 +184,13 @@ def sum13(nums: list[int]) -> int:
 
 def centeredAverage(nums: list[int]) -> int:
     sum, _min, _max = 0, nums[0], nums[0]
-    
+
     for i in range(len(nums)):
         sum += nums[i]
-        
+
         if nums[i] < _min:
             _min = nums[i]
-        
+
         if nums[i] > _max:
             _max = nums[i]
 
@@ -208,7 +208,7 @@ def sum67(nums: list[int]) -> int:
             skip = False
         elif not skip:
             total += n
-    
+
     return total
 
 
@@ -232,7 +232,7 @@ def sum28(nums: list[int]) -> bool:
     for n in nums:
         if n == 2:
             total += n
-    
+
     return total == 8
 
 
@@ -244,7 +244,7 @@ def more14(nums: list[int]) -> bool:
             count += 1
         if n == 4:
             count -= 1
-    
+
     return count > 0
 
 
@@ -253,7 +253,7 @@ def fizzArray(n: int) -> list[int]:
 
     for i in range(n):
         arr.append(i)
-    
+
     return arr
 
 
@@ -269,7 +269,7 @@ def fizzArray2(n: int) -> list[str]:
 
     for i in range(n):
         arr.append(str(i))
-    
+
     return arr
 
 
@@ -281,18 +281,18 @@ def no14(nums: list[int]) -> bool:
             has1 = True
         if n == 4:
             has4 = True
-        
+
         if has1 and has4:
             return False
-    
-    return not(has1 and has4)
+
+    return not (has1 and has4)
 
 
 def isEverywhere(nums: list[int], val: int) -> bool:
     for i in range(len(nums) - 1):
         if nums[i] != val and nums[i+1] != val:
             return False
-    
+
     return True
 
 
@@ -318,7 +318,7 @@ def matchUp(nums1: list[int], nums2: list[int]) -> int:
     for i in range(len(nums1)):
         if nums1[i] != nums2[i] and abs(nums1[i] - nums2[i]) <= 2:
             count += 1
-    
+
     return count
 
 
@@ -343,13 +343,13 @@ def has12(nums: list[int]) -> bool:
 def mod_three(nums: list[int]) -> bool:
     for i in range(len(nums)-2):
         if (
-            not nums[i]     % 2 and
-            not nums[i+1]   % 2 and
-            not nums[i+2]   % 2
+            not nums[i] % 2 and
+            not nums[i+1] % 2 and
+            not nums[i+2] % 2
         ) or (
-            nums[i]     % 2 and
-            nums[i+1]   % 2 and
-            nums[i+2]   % 2
+            nums[i] % 2 and
+            nums[i+1] % 2 and
+            nums[i+2] % 2
         ):
             return True
     return False
@@ -379,9 +379,9 @@ def two_two(nums: list[int]) -> bool:
         return nums[0] != 2
 
     count, i = 0, 0
-    couple  : bool = False
-    only    : bool
-    both    : bool
+    couple: bool = False
+    only: bool
+    both: bool
 
     while i < len(nums)-1:
         only = (nums[i] == 2 and nums[i+1] != 2) or (nums[i] != 2 and nums[i+1] == 2)

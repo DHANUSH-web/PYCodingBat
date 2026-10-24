@@ -47,23 +47,24 @@ from main import (
     shift_left,
 )
 
+
 class TestMain(unittest.TestCase):
 
     def test_concat(self):
         self.assertEqual(concat("abc", "cat"), "abcat")
         self.assertEqual(concat("dog", "cat"), "dogcat")
         self.assertEqual(concat("abc", ""), "abc")
-    
+
     def test_lastTwo(self):
         self.assertEqual(last_two("coding"), "codign")
         self.assertEqual(last_two("cat"), "cta")
         self.assertEqual(last_two("ab"), "ba")
-    
+
     def test_seeColors(self):
         self.assertEqual(see_colors("redxx"), "red")
         self.assertEqual(see_colors("xxred"), "")
         self.assertEqual(see_colors("blueTimes"), "blue")
-    
+
     def test_frontAgain(self):
         self.assertTrue(front_again("edited"))
         self.assertFalse(front_again("edit"))
@@ -73,7 +74,7 @@ class TestMain(unittest.TestCase):
         self.assertEqual(min_cat("Hello", "Hi"), "loHi")
         self.assertEqual(min_cat("Hello", "java"), "ellojava")
         self.assertEqual(min_cat("java", "Hello"), "javaello")
-    
+
     def test_extraFront(self):
         self.assertEqual(extra_front("Hello"), "HeHeHe")
         self.assertEqual(extra_front("ab"), "ababab")
@@ -165,12 +166,12 @@ class TestMain(unittest.TestCase):
         self.assertEqual(sum13([1, 2, 2, 1]), 6)
         self.assertEqual(sum13([1, 1]), 2)
         self.assertEqual(sum13([1, 2, 2, 1, 13]), 6)
-        
+
     def test_centeredAverage(self):
         self.assertEqual(centeredAverage([1, 2, 3, 4, 100]), 3)
         self.assertEqual(centeredAverage([1, 1, 5, 5, 10, 8, 7]), 5)
         self.assertEqual(centeredAverage([-10, -4, -2, -4, -2, 0]), -3)
-    
+
     def test_sum67(self):
         self.assertEqual(sum67([1, 2, 2]), 5)
         self.assertEqual(sum67([1, 2, 2, 6, 99, 99, 7]), 5)
@@ -180,7 +181,7 @@ class TestMain(unittest.TestCase):
         self.assertEqual(sum67([1, 6, 7, 2, 6, 99, 7]), 3)
         self.assertEqual(sum67([1, 6, 99, 7, 7]), 8)
         self.assertEqual(sum67([6, 7, 7]), 7)
-    
+
     def test_has22(self):
         self.assertTrue(has22([1, 2, 2]))
         self.assertFalse(has22([1, 2, 1, 2]))
@@ -251,7 +252,7 @@ class TestMain(unittest.TestCase):
         self.assertTrue(mod_three([2, 1, 3, 5]))
         self.assertFalse(mod_three([2, 1, 2, 5]))
         self.assertTrue(mod_three([2, 4, 2, 5]))
-    
+
     def test_have_three(self):
         self.assertTrue(have_three([3, 1, 3, 1, 3]))
         self.assertFalse(have_three([3, 1, 3, 3]))
