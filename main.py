@@ -423,6 +423,17 @@ def shift_left(nums: list) -> list:
     return nums if len(nums) <= 1 else [*nums[1:], nums[0]]
 
 
+def pre4(nums: list[int]) -> list[int]:
+    index: int = -1
+
+    for i in range(len(nums)):
+        if nums[i] == 4:
+            index = i
+            break
+
+    return nums if index == -1 else nums[:index]
+
+
 if __name__ == "__main__":
     # print("Run test cases with `uv run python unittest -v`")
     print("Running unit tests...")
