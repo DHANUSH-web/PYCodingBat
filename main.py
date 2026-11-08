@@ -416,12 +416,7 @@ def triple_up(nums: list[int]) -> bool:
 
 
 def fizz_array3(start: int, end: int) -> list:
-    arr: list[int] = []
-
-    for i in range(start, end):
-        arr.append(i)
-
-    return arr
+    return [i for i in range(start, end)]
 
 
 def shift_left(nums: list) -> list:
