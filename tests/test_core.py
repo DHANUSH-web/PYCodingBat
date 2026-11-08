@@ -46,7 +46,10 @@ from lib.core import (
     fizz_array3,
     shift_left,
     pre4,
+<<<<<<< HEAD:tests/test_core.py
     post4,
+=======
+>>>>>>> b9b46bb (CodingBat: optimized Arrays::pre4):tests/test_main.py
 )
 
 
@@ -289,8 +292,11 @@ class TestCore(unittest.TestCase):
         self.assertEqual(pre4([1, 2, 4, 1]), [1, 2])
         self.assertEqual(pre4([3, 1, 4]), [3, 1])
         self.assertEqual(pre4([1, 4, 4]), [1])
+<<<<<<< HEAD:tests/test_core.py
 
     def test_post4(self):
         self.assertEqual(post4([ 2, 4, 1, 2]), [1, 2])
         self.assertEqual(post4([4, 1, 4, 2]), [2])
         self.assertEqual(post4([4, 4, 1, 2, 3]), [1, 2, 3])
+=======
+>>>>>>> b9b46bb (CodingBat: optimized Arrays::pre4):tests/test_main.py
