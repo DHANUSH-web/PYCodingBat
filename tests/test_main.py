@@ -45,6 +45,7 @@ from main import (
     triple_up,
     fizz_array3,
     shift_left,
+    pre4,
 )
 
 
@@ -282,3 +283,8 @@ class TestMain(unittest.TestCase):
         self.assertEqual(shift_left([5, 1, 2, 3, 4]), [1, 2, 3, 4, 5])
         self.assertEqual(shift_left([1, 2]), [2, 1])
         self.assertEqual(shift_left([1]), [1])
+
+    def test_pre4(self):
+        self.assertEqual(pre4([1, 2, 4, 1]), [1, 2])
+        self.assertEqual(pre4([3, 1, 4]), [3, 1])
+        self.assertEqual(pre4([1, 4, 4]), [1])
