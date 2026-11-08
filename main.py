@@ -420,9 +420,7 @@ def fizz_array3(start: int, end: int) -> list:
 
 
 def shift_left(nums: list) -> list:
-    if len(nums) <= 1:
-        return nums
-    return [*nums[1:], nums[0]]
+    return nums if len(nums) <= 1 else [*nums[1:], nums[0]]
 
 
 if __name__ == "__main__":
