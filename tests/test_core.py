@@ -1,5 +1,5 @@
 import unittest
-from main import (
+from lib.core import (
     concat,
     last_two,
     see_colors,
@@ -46,10 +46,11 @@ from main import (
     fizz_array3,
     shift_left,
     pre4,
+    post4,
 )
 
 
-class TestMain(unittest.TestCase):
+class TestCore(unittest.TestCase):
 
     def test_concat(self):
         self.assertEqual(concat("abc", "cat"), "abcat")
@@ -288,3 +289,8 @@ class TestMain(unittest.TestCase):
         self.assertEqual(pre4([1, 2, 4, 1]), [1, 2])
         self.assertEqual(pre4([3, 1, 4]), [3, 1])
         self.assertEqual(pre4([1, 4, 4]), [1])
+
+    def test_post4(self):
+        self.assertEqual(post4([ 2, 4, 1, 2]), [1, 2])
+        self.assertEqual(post4([4, 1, 4, 2]), [2])
+        self.assertEqual(post4([4, 4, 1, 2, 3]), [1, 2, 3])
