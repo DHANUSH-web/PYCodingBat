@@ -431,3 +431,16 @@ def pre4(nums: list[int]) -> list[int]:
             break
 
     return nums if index == -1 else nums[:index]
+
+def post4(nums: list[int]) -> list[int]:
+    index: int = -1
+
+    for i in range(len(nums)-1, -1, -1):
+        if nums[i] == 4:
+            index = i
+            break
+
+    if index == -1:
+        return nums
+
+    return nums[index+1:]
