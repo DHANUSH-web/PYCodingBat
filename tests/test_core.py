@@ -1,5 +1,5 @@
 import unittest
-from main import (
+from lib.core import (
     concat,
     last_two,
     see_colors,
@@ -49,7 +49,7 @@ from main import (
 )
 
 
-class TestMain(unittest.TestCase):
+class TestCore(unittest.TestCase):
 
     def test_concat(self):
         self.assertEqual(concat("abc", "cat"), "abcat")
