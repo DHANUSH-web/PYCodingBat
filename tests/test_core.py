@@ -15,27 +15,27 @@ from lib.core import (
     in_order_equal,
     JsonDataProps,
     fetch_json_data,
-    lastDigit,
-    lessBy10,
-    withoutDoubles,
-    maxMod5,
-    redTicket,
-    greenTicket,
-    shareDigit,
+    last_digit,
+    less_by10,
+    without_doubles,
+    max_mod5,
+    red_ticket,
+    green_ticket,
+    share_digit,
     sum13,
-    centeredAverage,
+    centered_average,
     sum67,
     has22,
     lucky13,
     sum28,
     more14,
-    fizzArray,
+    fizz_array,
     only14,
-    fizzArray2,
+    fizz_array2,
     no14,
-    isEverywhere,
+    is_everywhere,
     either24,
-    matchUp,
+    match_up,
     has77,
     has12,
     mod_three,
@@ -46,10 +46,7 @@ from lib.core import (
     fizz_array3,
     shift_left,
     pre4,
-<<<<<<< HEAD:tests/test_core.py
     post4,
-=======
->>>>>>> b9b46bb (CodingBat: optimized Arrays::pre4):tests/test_main.py
 )
 
 
@@ -133,39 +130,39 @@ class TestCore(unittest.TestCase):
         self.assertFalse(data.completed)
 
     def test_lastDigit(self):
-        self.assertTrue(lastDigit(23, 19, 13))
-        self.assertFalse(lastDigit(23, 19, 20))
-        self.assertTrue(lastDigit(23, 19, 3))
+        self.assertTrue(last_digit(23, 19, 13))
+        self.assertFalse(last_digit(23, 19, 20))
+        self.assertTrue(last_digit(23, 19, 3))
 
     def test_lessBy10(self):
-        self.assertTrue(lessBy10(1, 2, 11))
-        self.assertFalse(lessBy10(3, 2, 11))
-        self.assertTrue(lessBy10(10, 1, 11))
+        self.assertTrue(less_by10(1, 2, 11))
+        self.assertFalse(less_by10(3, 2, 11))
+        self.assertTrue(less_by10(10, 1, 11))
 
     def test_withoutDoubles(self):
-        self.assertEqual(withoutDoubles(2, 3, True), 5)
-        self.assertEqual(withoutDoubles(3, 3, True), 7)
-        self.assertEqual(withoutDoubles(3, 3, False), 6)
+        self.assertEqual(without_doubles(2, 3, True), 5)
+        self.assertEqual(without_doubles(3, 3, True), 7)
+        self.assertEqual(without_doubles(3, 3, False), 6)
 
     def test_maxMod5(self):
-        self.assertEqual(maxMod5(2, 3), 3)
-        self.assertEqual(maxMod5(6, 2), 6)
-        self.assertEqual(maxMod5(3, 2), 3)
+        self.assertEqual(max_mod5(2, 3), 3)
+        self.assertEqual(max_mod5(6, 2), 6)
+        self.assertEqual(max_mod5(3, 2), 3)
 
     def test_redTicket(self):
-        self.assertEqual(redTicket(2, 2, 2), 10)
-        self.assertEqual(redTicket(2, 2, 1), 0)
-        self.assertEqual(redTicket(0, 0, 0), 5)
+        self.assertEqual(red_ticket(2, 2, 2), 10)
+        self.assertEqual(red_ticket(2, 2, 1), 0)
+        self.assertEqual(red_ticket(0, 0, 0), 5)
 
     def test_greenTicket(self):
-        self.assertEqual(greenTicket(1, 2, 3), 0)
-        self.assertEqual(greenTicket(2, 2, 2), 20)
-        self.assertEqual(greenTicket(1, 1, 2), 10)
+        self.assertEqual(green_ticket(1, 2, 3), 0)
+        self.assertEqual(green_ticket(2, 2, 2), 20)
+        self.assertEqual(green_ticket(1, 1, 2), 10)
 
     def test_shareDigit(self):
-        self.assertTrue(shareDigit(12, 23))
-        self.assertFalse(shareDigit(12, 43))
-        self.assertFalse(shareDigit(12, 44))
+        self.assertTrue(share_digit(12, 23))
+        self.assertFalse(share_digit(12, 43))
+        self.assertFalse(share_digit(12, 44))
 
     def test_sum13(self):
         self.assertEqual(sum13([1, 2, 2, 1]), 6)
@@ -173,9 +170,9 @@ class TestCore(unittest.TestCase):
         self.assertEqual(sum13([1, 2, 2, 1, 13]), 6)
 
     def test_centeredAverage(self):
-        self.assertEqual(centeredAverage([1, 2, 3, 4, 100]), 3)
-        self.assertEqual(centeredAverage([1, 1, 5, 5, 10, 8, 7]), 5)
-        self.assertEqual(centeredAverage([-10, -4, -2, -4, -2, 0]), -3)
+        self.assertEqual(centered_average([1, 2, 3, 4, 100]), 3)
+        self.assertEqual(centered_average([1, 1, 5, 5, 10, 8, 7]), 5)
+        self.assertEqual(centered_average([-10, -4, -2, -4, -2, 0]), -3)
 
     def test_sum67(self):
         self.assertEqual(sum67([1, 2, 2]), 5)
@@ -208,9 +205,9 @@ class TestCore(unittest.TestCase):
         self.assertTrue(more14([1, 1]))
 
     def test_fizzArray(self):
-        self.assertEqual(fizzArray(4), [0, 1, 2, 3])
-        self.assertEqual(fizzArray(1), [0])
-        self.assertEqual(fizzArray(10), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+        self.assertEqual(fizz_array(4), [0, 1, 2, 3])
+        self.assertEqual(fizz_array(1), [0])
+        self.assertEqual(fizz_array(10), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 
     def test_only14(self):
         self.assertTrue(only14([1, 4, 1, 4]))
@@ -218,9 +215,9 @@ class TestCore(unittest.TestCase):
         self.assertTrue(only14([1, 1]))
 
     def test_fizzArray2(self):
-        self.assertEqual(fizzArray2(4), ['0', '1', '2', '3'])
-        self.assertEqual(fizzArray2(1), ['0'])
-        self.assertEqual(fizzArray2(10), ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'])
+        self.assertEqual(fizz_array2(4), ['0', '1', '2', '3'])
+        self.assertEqual(fizz_array2(1), ['0'])
+        self.assertEqual(fizz_array2(10), ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'])
 
     def test_no14(self):
         self.assertTrue(no14([1, 2, 3]))
@@ -228,9 +225,9 @@ class TestCore(unittest.TestCase):
         self.assertTrue(no14([2, 3, 4]))
 
     def test_isEverywhere(self):
-        self.assertTrue(isEverywhere([1, 2, 1, 3], 1))
-        self.assertFalse(isEverywhere([1, 2, 1, 3], 2))
-        self.assertFalse(isEverywhere([1, 2, 1, 3, 4], 1))
+        self.assertTrue(is_everywhere([1, 2, 1, 3], 1))
+        self.assertFalse(is_everywhere([1, 2, 1, 3], 2))
+        self.assertFalse(is_everywhere([1, 2, 1, 3, 4], 1))
 
     def test_either24(self):
         self.assertTrue(either24([1, 2, 2]))
@@ -238,9 +235,9 @@ class TestCore(unittest.TestCase):
         self.assertFalse(either24([4, 4, 1, 2, 2]))
 
     def test_matchUp(self):
-        self.assertEqual(matchUp([1, 2, 3], [2, 3, 10]), 2)
-        self.assertEqual(matchUp([1, 2, 3], [2, 3, 5]), 3)
-        self.assertEqual(matchUp([1, 2, 3], [2, 3, 3]), 2)
+        self.assertEqual(match_up([1, 2, 3], [2, 3, 10]), 2)
+        self.assertEqual(match_up([1, 2, 3], [2, 3, 5]), 3)
+        self.assertEqual(match_up([1, 2, 3], [2, 3, 3]), 2)
 
     def test_has77(self):
         self.assertTrue(has77([1, 7, 7]))
@@ -292,11 +289,8 @@ class TestCore(unittest.TestCase):
         self.assertEqual(pre4([1, 2, 4, 1]), [1, 2])
         self.assertEqual(pre4([3, 1, 4]), [3, 1])
         self.assertEqual(pre4([1, 4, 4]), [1])
-<<<<<<< HEAD:tests/test_core.py
 
     def test_post4(self):
-        self.assertEqual(post4([ 2, 4, 1, 2]), [1, 2])
+        self.assertEqual(post4([2, 4, 1, 2]), [1, 2])
         self.assertEqual(post4([4, 1, 4, 2]), [2])
         self.assertEqual(post4([4, 4, 1, 2, 3]), [1, 2, 3])
-=======
->>>>>>> b9b46bb (CodingBat: optimized Arrays::pre4):tests/test_main.py

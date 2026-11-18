@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 import requests
 
 
@@ -116,21 +117,21 @@ def fetch_json_data(url: str, params: dict | None = None) -> JsonDataProps:
     )
 
 
-def lastDigit(a: int, b: int, c: int) -> bool:
+def last_digit(a: int, b: int, c: int) -> bool:
     return a % 10 == b % 10 or a % 10 == c % 10 or b % 10 == c % 10
 
 
-def lessBy10(a: int, b: int, c: int) -> bool:
+def less_by10(a: int, b: int, c: int) -> bool:
     return abs(a - b) >= 10 or abs(a - c) >= 10 or abs(b - c) >= 10
 
 
-def withoutDoubles(die1: int, die2: int, no_doubles: bool) -> int:
+def without_doubles(die1: int, die2: int, no_doubles: bool) -> int:
     if no_doubles and die1 == die2:
         die1 = 1 if die1 == 6 else die1 + 1
     return die1 + die2
 
 
-def maxMod5(a: int, b: int) -> int:
+def max_mod5(a: int, b: int) -> int:
     if a == b:
         return 0
 
@@ -140,7 +141,7 @@ def maxMod5(a: int, b: int) -> int:
     return max(a, b)
 
 
-def redTicket(a: int, b: int, c: int) -> int:
+def red_ticket(a: int, b: int, c: int) -> int:
     if a == b == c == 2:
         return 10
 
@@ -153,7 +154,7 @@ def redTicket(a: int, b: int, c: int) -> int:
     return 0
 
 
-def greenTicket(a: int, b: int, c: int) -> int:
+def green_ticket(a: int, b: int, c: int) -> int:
     if a == b == c:
         return 20
 
@@ -163,7 +164,7 @@ def greenTicket(a: int, b: int, c: int) -> int:
     return 0
 
 
-def shareDigit(a: int, b: int) -> bool:
+def share_digit(a: int, b: int) -> bool:
     return a // 10 == b // 10 or a // 10 == b % 10 or a % 10 == b // 10 or a % 10 == b % 10
 
 
@@ -181,7 +182,7 @@ def sum13(nums: list[int]) -> int:
     return nums[0] + sum13(nums[1:])
 
 
-def centeredAverage(nums: list[int]) -> int:
+def centered_average(nums: list[int]) -> int:
     sum, _min, _max = 0, nums[0], nums[0]
 
     for i in range(len(nums)):
@@ -244,7 +245,7 @@ def more14(nums: list[int]) -> bool:
     return count > 0
 
 
-def fizzArray(n: int) -> list[int]:
+def fizz_array(n: int) -> list[int]:
     return [i for i in range(n)]
 
 
@@ -255,7 +256,7 @@ def only14(nums: list[int]) -> bool:
     return True
 
 
-def fizzArray2(n: int) -> list[str]:
+def fizz_array2(n: int) -> list[str]:
     return [str(i) for i in range(n)]
 
 
@@ -274,7 +275,7 @@ def no14(nums: list[int]) -> bool:
     return not (has1 and has4)
 
 
-def isEverywhere(nums: list[int], val: int) -> bool:
+def is_everywhere(nums: list[int], val: int) -> bool:
     for i in range(len(nums) - 1):
         if nums[i] != val and nums[i+1] != val:
             return False
@@ -298,7 +299,7 @@ def either24(nums: list[int]) -> bool:
     return is2 != is4
 
 
-def matchUp(nums1: list[int], nums2: list[int]) -> int:
+def match_up(nums1: list[int], nums2: list[int]) -> int:
     count: int = 0
 
     for i in range(len(nums1)):
@@ -309,7 +310,7 @@ def matchUp(nums1: list[int], nums2: list[int]) -> int:
 
 
 def has77(nums: list[int]) -> bool:
-    for i in range(0, len(nums)-2):
+    for i in range(len(nums)-2):
         if (nums[i] == 7 and (nums[i+1] == 7 or nums[i+2] == 7)) or (nums[i+1] == 7 and nums[i+2] == 7):
             return True
     return False
