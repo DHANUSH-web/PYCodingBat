@@ -248,12 +248,7 @@ def more14(nums: list[int]) -> bool:
 
 
 def fizzArray(n: int) -> list[int]:
-    arr: list[int] = []
-
-    for i in range(n):
-        arr.append(i)
-
-    return arr
+    return [i for i in range(n)]
 
 
 def only14(nums: list[int]) -> bool:
@@ -264,12 +259,7 @@ def only14(nums: list[int]) -> bool:
 
 
 def fizzArray2(n: int) -> list[str]:
-    arr: list[str] = []
-
-    for i in range(n):
-        arr.append(str(i))
-
-    return arr
+    return [str(i) for i in range(n)]
 
 
 def no14(nums: list[int]) -> bool:
