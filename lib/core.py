@@ -432,3 +432,14 @@ def post4(nums: list[int]) -> list[int]:
         return nums
 
     return nums[index+1:]
+
+
+def not_alone(nums: list[int], val: int) -> list[int]:
+    if len(nums) <= 2:
+        return nums
+
+    for i in range(1, len(nums)-1):
+        if nums[i] == val and nums[i-1] != val and nums[i+1] != val:
+            nums[i] = max(nums[i-1], nums[i+1])
+
+    return nums

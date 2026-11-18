@@ -2,6 +2,7 @@ import unittest
 from lib.core import (
     concat,
     last_two,
+    not_alone,
     see_colors,
     front_again,
     min_cat,
@@ -294,3 +295,8 @@ class TestCore(unittest.TestCase):
         self.assertEqual(post4([2, 4, 1, 2]), [1, 2])
         self.assertEqual(post4([4, 1, 4, 2]), [2])
         self.assertEqual(post4([4, 4, 1, 2, 3]), [1, 2, 3])
+
+    def test_not_alone(self):
+        self.assertEqual(not_alone([1, 2, 3], 2), [1, 3, 3])
+        self.assertEqual(not_alone([1, 2, 3, 2, 5, 2], 2), [1, 3, 3, 5, 5, 2])
+        self.assertEqual(not_alone([3, 4], 3), [3, 4])
