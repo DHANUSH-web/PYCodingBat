@@ -187,11 +187,8 @@ def centeredAverage(nums: list[int]) -> int:
     for i in range(len(nums)):
         sum += nums[i]
 
-        if nums[i] < _min:
-            _min = nums[i]
-
-        if nums[i] > _max:
-            _max = nums[i]
+        _min = min(nums[i], _min)
+        _max = max(nums[i], _max)
 
     return (sum - _min - _max) // (len(nums) - 2)
 
